@@ -59,6 +59,9 @@
     "testEnvironment": "jsdom",
     "testPathIgnorePatterns": [
       "e2e-tests"
+    ],
+    "testMatch": [
+      "<rootDir>/test/**/*.(spec|test).[jt]s?(x)"
     ]
   }
 }
