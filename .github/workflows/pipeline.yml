@@ -27,8 +27,10 @@ jobs:
 
       - name: Run Playwright tests
         run: npm run test:e2e
-      
+
       - name: Trigger deployment on render
         uses: sws2apps/render-deployment@main
         with:
-          serviceId: 
+          serviceId: ${{ secrets.RENDER_SERVICE_ID }}
+          apiKey: ${{ secrets.RENDER_API_KEY }}
+          multipleDeployment: false
