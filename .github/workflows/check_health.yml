@@ -2,7 +2,7 @@ name: Check Health
 
 on:
   schedule:
-    - cron: '0 4,10,16,22 * * *'
+    - cron: '*/10 * * * *'
 
 jobs:
   check_health:
@@ -11,6 +11,6 @@ jobs:
       - name: Check the deployed service URL
         uses: jtalk/url-health-check-action@v4
         with:
-          url: https://wronggg-cicd-part11-wuio.onrender.com/health
+          url: https://fso-cicd-part11-wuio.onrender.com/health
           max-attempts: 3
-          retry-delay: 15s
+          retry-delay: 120s
